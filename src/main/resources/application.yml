@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/h2/schema.sql
+    username: root
+    password: admin
+    driverClassName: org.h2.Driver
+    #data: jdbc:h2:file:./db/h2/data.sql
+  jpa:
+     database-platform: org.hibernate.dialect.H2Dialect
+    
+#spring.jpa.defer-datasource-initialization: true
+
+spring.h2.console.enabled: true
+
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+
+server.port: 8070
+
+course:
+   default-message: valor por defecto
+   message: hola desde application.yml
+   
+spring.profiles.active: prod
+
+#server.servlet.context-path: /springboot
